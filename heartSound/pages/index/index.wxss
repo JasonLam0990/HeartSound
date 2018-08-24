@@ -1,0 +1,14 @@
+/**index.wxss**/
+
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 100%;
+}
+
+.icon-button{
+  height: 300rpx;
+  width: 300rpx;
+}

@@ -1,0 +1,149 @@
+/* pages/commom/personChat/personChat.wxss */
+.top-bar{
+  height: 100rpx;
+  background: #515151;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.start-button{
+  font-size: 40rpx;
+  color: #fff;
+}
+.waiting-icon{
+  position: relative;
+  left: 10rpx;
+  bottom: 10rpx;
+}
+
+.container{
+  background: #ffffff;
+  color: #fff;
+  font-size: 55rpx;
+  padding-bottom: 20%;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
+.container {
+  display: flex;
+  display:-webkit-flex;
+  box-sizing: border-box;
+} 
+.placeholder{
+  color: #999;
+}
+/*聊天盒子*/
+.scrollwechat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+  padding-top: 10rpx;
+}
+.scrollview{
+ height: 100%;
+
+}
+.scrollwechat li {
+  width: 100%;
+  display: flex;
+  margin-top: 20rpx;
+}
+
+.container .user {
+  flex-direction: row;
+}
+
+.container .sys{
+  flex-direction: row-reverse;
+}
+
+.input-layer{
+  height: 10%;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: blue;
+}
+.input-panel {
+    height: 100%;
+    padding: 0 15rpx 0 15rpx;
+    background: #f0f0f0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+input{
+  color: #515151;
+}
+.send-input {
+    font-size: 38rpx;
+    flex: 1;
+    height: 95rpx;
+    background: #fff;
+    border:#ddd 1rpx solid;
+    border-radius: 10rpx;
+    box-sizing: border-box;
+    padding: 0 10rpx;
+}
+.send-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120rpx;
+    height: 80rpx;
+    line-height: 75rpx;
+    background-color: #474646;
+    font-size: 32rpx;
+    color:#fff;
+    border-radius: 10rpx;
+    margin-left: 15rpx;
+}
+.send-btn:active{
+    opacity: .7;
+}
+.icon{
+  height: 40rpx;
+  width: 40rpx;
+}
+
+.me-box{
+    margin: 20rpx;
+  margin-left: 180rpx;
+}
+.me{
+  padding: 20rpx;
+  border: 5rpx solid #7aa0cb;
+}
+.you{
+  padding: 20rpx;
+  margin: 20rpx;
+  margin-left: 180rpx;
+  border: 5rpx solid #7aa0cb;
+}
+
+
+.triangle image{
+  width: 20rpx;
+  height: 80rpx;
+}
+.textview1 {
+  width:70%;
+  border-radius: 10rpx;
+  background: #7aa0cb;
+  padding: 20rpx;
+}
+.textview2 {
+  width:70%;
+  background: #f3a09e;
+  border-radius: 10rpx;
+  padding: 20rpx;
+}
+.link{
+  height: 150rpx;
+}

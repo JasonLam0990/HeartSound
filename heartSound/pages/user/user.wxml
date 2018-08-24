@@ -1,0 +1,40 @@
+
+<view class="container">
+
+  <view class="user-wechat-info">
+      <!--头像渲染-->
+      <view class='avatar'>
+        <image src="{{userInfo.avatarUrl}}"></image>
+      </view>
+      <view class="nick-name">{{userInfo.nickName}}</view>
+  </view>
+  
+  
+  <view class="more-list">
+  
+      <view class="more-btn" bindtap='gotoFeedback' >
+        <image class="btn-icon" src="/images/issue.png"></image>
+        <text class="btn-text">反馈</text>
+        <view class="btn-open">
+          <image class="btn-enter" src="/images/enter.png"></image>
+        </view>
+      </view>
+
+      <view class="more-btn" bindtap='gotoAbout'>
+        <image class="btn-icon" src="/images/about.png"></image>
+        <text class="btn-text">关于</text>
+        <view class="btn-open">
+            <image class="btn-enter" src="/images/enter.png"></image>
+        </view>
+      </view>
+  </view>
+
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="login-btn">
+    <text>授权登陆</text>
+  </button>
+
+  <button wx:else open-type="share" class="login-btn">
+    <text>分享给好友</text>
+  </button>
+
+</view>

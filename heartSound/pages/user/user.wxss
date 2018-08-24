@@ -1,0 +1,159 @@
+
+.user-wechat-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 95%;
+    margin: 25rpx auto;
+    height: 280rpx;
+    border-radius: 30rpx;
+    box-shadow: 0px 2px 2px 1px #cccccc;
+    background-color: #f3a09e;
+    overflow: hidden;
+}
+.avatar image {
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+    margin-top: 30rpx;
+    display: block;
+}
+.nick-name {
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 34rpx;
+  position: absolute;
+  top: 225rpx;
+}
+.nav-item-box{
+  display: flex;
+  flex-wrap: wrap;
+}
+.nav-item{
+  margin-top: 60rpx;
+  display: block;
+  height: 125rpx;
+  width: 125rpx;
+}
+.append{
+  display: flex;
+  justify-content: center;
+}
+
+/**more.wxss**/
+.container{
+  background-color: #f6f6f6;
+}
+.user-info, .more-btn {
+  display: flex;
+  background-color: #fff;
+  min-height: 85rpx;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+/**user-info**/
+.user-info-box{
+  margin-bottom: 40rpx;
+}
+.user-info {
+  flex-direction: column;
+  margin: 30rpx 0 -1px;
+  padding: 25rpx 30rpx 20rpx;
+}
+.info-hd {
+  display: flex;
+  align-items: center;
+}
+.bind-btn {
+  color: #aaa;
+}
+.user-avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 5px;
+}
+.user-title {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 25rpx;
+}
+.time-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10pt;
+  line-height: 140%;
+  color: #aaa;
+}
+.user-name {
+  font-size: 16pt;
+  line-height: 160%;
+  letter-spacing: 1px;
+}
+.user-id {
+  font-size: 11pt;
+  color: #8b8b8b;
+}
+.info-bd {
+  display: flex;
+  justify-content: space-between;
+  padding: 25rpx 15rpx 0 5rpx;
+  font-size: 11pt;
+  line-height: 150%;
+  color: #8b8b8b;
+}
+.info-bd-left, .info-bd-right {
+  display: flex;
+  flex-direction: column;
+}
+.info-bd-left{
+  flex-shrink: 0;
+  padding-right: 30rpx;
+}
+/**more-list**/
+.more-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.more-btn {
+  align-items: center;
+  font-size: 13pt;
+  padding: 0 30rpx;
+  margin-top: 20rpx;
+}
+.issue-link, .about-link {
+  margin-bottom: 20rpx;
+}
+.btn-icon {
+  width: 55rpx;
+  height: 55rpx;
+  margin-right: 15rpx;
+}
+.btn-text {
+  flex: 1;
+  font-size: 36rpx;
+  color: #515151;
+}
+.btn-open {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: 10rpx;
+}
+.btn-enter {
+  width: 18rpx;
+  height: 27rpx;
+}
+.login-btn {
+  font-size: 13pt;
+  line-height: 85rpx;
+  height: 85rpx;
+  background: #7aa0cb;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  margin: 40rpx 3%;
+}

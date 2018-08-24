@@ -1,0 +1,48 @@
+/* pages/user/feedback/feedback.wxss */
+.version{
+    height: 100rpx;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 45rpx;
+    box-sizing: border-box;
+    font-size: 13pt;
+    color: #666;
+    border-bottom: 1px #e5e5e5 solid;
+}
+.version-title{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.title-name{
+    padding-right: 10rpx;
+}
+.version-text{
+    font-size: 10pt;
+    line-height: 100%;
+    color: #7acfa6;
+    border: 1px solid #7acfa6;
+    padding: 5rpx 10rpx;
+    border-radius: 5rpx;
+    margin-left: 10rpx;
+    text-align: center;
+}
+.version-log-link{
+    position: relative;
+    font-size: 12pt;
+    color: #7acfa6;
+}
+.version-log-link:active{
+    opacity: .8;
+}
+.update-log::after{
+    content: '';
+    position: absolute;
+    right: -3px;
+    top: -1px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #e55c5c;
+}

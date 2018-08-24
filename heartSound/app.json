@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/draw/draw",
+    "pages/index/talk/talk",
+    "pages/index/longtalk/longtalk",
+    "pages/user/user",
+    "pages/user/about/about",
+    "pages/user/feedback/feedback"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f3a09e",
+    "navigationBarTitleText": "心声Lite",
+    "navigationBarTextStyle": "fff"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#f3a09e",
+    "borderStyle": "#f3a09e",
+    "list": [
+      {
+        "iconPath": "images/box_1.png",
+        "selectedIconPath": "images/box_2.png",
+        "pagePath": "pages/index/index",
+        "text": "工具"
+      },
+      {
+        "iconPath": "images/user_1.png",
+        "selectedIconPath": "images/user_2.png",
+        "pagePath": "pages/user/user",
+        "text": "我的"
+      }
+    ]
+  },
+  "plugins": {
+    "WechatSI": {
+      "version": "0.1.0",
+      "provider": "wx069ba97219f66d99"
+    }
+  }
+}

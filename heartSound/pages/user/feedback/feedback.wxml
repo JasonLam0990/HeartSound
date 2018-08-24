@@ -1,0 +1,10 @@
+<!--pages/user/feedback/feedback.wxml-->
+<view class="version">
+      <view class="version-title">
+        <text class="title-name">反馈邮箱</text>
+      </view>
+      <view bindtap="toggleLog">
+        <text class="version-log-link update-log" wx:if="{{!showLog}}">535073920@qq.com</text> 
+        <text class="version-log-link" wx:else>简介</text> 
+      </view>
+</view>

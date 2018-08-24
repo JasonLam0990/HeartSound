@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+  
+  <view class='box'>
+    <image src='/images/xljj.png' class='icon-button' bindtap='gotoSmallTalk'></image>
+    <image src='/images/zxct.png' class='icon-button' bindtap='gotoLongTalk'></image>
+  </view>
+
+  <view class='section'></view>
+
+  <view class='box' bindtap='gotoDraw'>
+    <image src='/images/hbty.png' class='icon-button'></image>
+  </view>
+
+</view>

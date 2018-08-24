@@ -1,0 +1,16 @@
+
+  <view class='canvas-tools-you'>
+    <view class='icon-box'>
+      <image class='icon' src='/images/dele-pink.png' bindtap='dele'></image>
+      <image class='icon'src='/images/rotate-pink.png' bindtap='rotate'></image>
+    </view>
+  </view>
+    <view class='canvas-area'>
+      <canvas canvas-id='myCanvas' class='myCanvas' disable-scroll='true' bindtouchstart='touchstart' bindtouchmove='touchmove'></canvas>
+    </view>
+  <view class='canvas-tools-me'>
+    <view class='icon-box'>
+      <image class='icon' src='/images/rotate-blue.png' bindtap='rotate'></image>
+      <image class='icon' src='/images/dele-blue.png' bindtap='dele'></image>
+    </view>
+  </view>

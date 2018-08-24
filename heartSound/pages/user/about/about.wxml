@@ -1,0 +1,29 @@
+<!--about.wxml-->
+
+<view class="container">
+<view class="version">
+      <view class="version-title">
+        <text class="title-name">心声Lite</text>
+        <text class="version-text">公益项目</text>
+      </view>
+      <view bindtap="toggleLog">
+        <text class="version-log-link update-log" wx:if="{{!showLog}}"></text> 
+        <text class="version-log-link" wx:else>简介</text> 
+      </view>
+</view>
+  <view class="content">
+    <view class="describe" wx:if="{{!showLog}}">
+        <text class="desc-title">简介</text>
+        <text class="desc-content">我们的身边有很多听障者，他们或许来到这个世界就未曾听到过任何欢声笑语。或者被忽然降临的疾病夺去了本该属于他们的平凡人的生活。</text>
+        <text class="desc-content">心声Lite是一款帮助听障者与普通人交流的微信小程序，希望能用微薄的力量，给予他们一点便利。</text>
+        <text class="desc-content">语音识别，使得街头路人可以告诉他们车站在何方</text>
+        <text class="desc-content">语音合成，可以帮他们向爸爸妈妈说一声“爸妈，让你们受累了”。</text>
+        <text class="desc-content">心声Lite，只为让世界多一点温暖</text>
+        <text class="desc-content"> </text>
+        <text class="desc-content"> </text>
+        <text class="desc-content" style='font-size:30rpx;color:#7aa0cb;line-height:2;'>心声Lite诚挚的欢迎各大公众号关联小程序，并期待与您的合作。AppID：wxfb65ccf6436cd4f6</text>
+        <text class="desc-content"> </text>
+        <text class="desc-content"> </text>
+    </view>
+</view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "小聊几句",
+  "usingComponents": {
+    "waiting-icon": "/components/waiting-icon/index"
+  }
+}

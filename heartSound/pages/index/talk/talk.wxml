@@ -1,0 +1,40 @@
+<!--pages/talk/talk.wxml-->
+<view class='container'>
+  <view class='button-layer' >
+      <image src='/images/button.png' class='speak-button' catchtouchstart="touchdown_plugin" catchtouchend="touchup_plugin"></image>
+  </view>
+  <view class='showme-layer'>
+    <view class='content-box-showme' scroll-y="true">
+      <text>{{content_up}}</text>
+    </view>
+  </view>
+  <view class='showyou-layer'>
+    <view class='content-box-showyou' scroll-y="true">
+      <view>{{content_down}}</view>
+    </view>
+  </view>
+  <view class='input-layer'>
+      <view class="input-panel">
+          <input class="send-input" value="{{input}}" type="text" name="content" bindinput="listenInput" placeholder="打字给对方看" />
+          <view class="send-btn" bindtap='dele'>
+            <image class='icon' src='/images/dele.png'></image>
+          </view>
+            <view class="send-btn" bindtap='wordtospeak' data-content="{{content_down}}">
+              <image class='icon' src='/images/speak.png'></image>
+            </view>
+      </view>
+  </view>
+  <!-- <view class='toast' wx:if="{{test}}" style="{{test?'  transform: scale(-1);':''}}">
+    <image src='/images/microphone.png' class='microphone'></image>
+    <text>正在试音...</text>
+  </view> -->
+  <view class='toast' wx:if="{{showmicro}}" style="{{showmicro?'  transform: scale(-1);':''}}">
+    <image src='/images/microphone.png' class='microphone'></image>
+    <text>正在识别</text>
+    <waiting-icon class='waiting-icon'></waiting-icon>
+  </view>
+  <view class='toast' wx:if="{{shownull}}" style="{{shownull?'  transform: scale(-1);':''}}">
+    <image src='/images/fail.png' class='warning'></image>
+    <text class='warning-text'>请说话</text>
+  </view>
+</view>

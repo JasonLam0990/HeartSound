@@ -1,0 +1,22 @@
+/**app.wxss**/
+.container {
+  font-size: 60rpx;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+  color: #515151;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.section{
+  height: 1%;
+  width: 100%;
+  background: #999999;
+}
+

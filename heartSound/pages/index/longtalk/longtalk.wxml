@@ -1,0 +1,48 @@
+<!--pages/commom/personChat/personChat.wxml-->
+
+<view class="container">
+  <view class='top-bar' bindtap='touchdown_plugin' style="{{recording?'opacity:0.7;':''}}">
+    <view wx:if="{{!recording}}">
+      <view class='start-button'>开始识别</view>
+    </view>
+    <view wx:else>
+      <view class='start-button'>正在识别<waiting-icon class='waiting-icon'></waiting-icon></view>
+    </view>
+  </view>
+  <!--反馈内容-->
+     <ul class="scrollwechat">
+      <scroll-view class="scrollview" scroll-y="true" scroll-top="{{scrollTop}}">
+        <block wx:for="{{content}}" wx:key="{{index}}">
+          <li class="{{item.person != 'me'?'user':'sys'}}">
+            <!--聊天框三角-->
+            <view class="triangle">
+                  <image wx:if="{{item.person != 'me'}}" src="/images/triangleRight.png"></image>
+                  <image wx:else  src="/images/triangleLeft.png"></image>
+            </view>
+
+            <!--内容 ：图片/文字-->
+            <view class="{{item.person != 'me'?'textview2':'textview1'}}">
+              <text class="feedbacktext">{{item.content}}</text>
+            </view>
+            
+            <view class="{{item.person != 'me'?'imgview2':'imgview1'}}"></view>
+          </li>
+        </block>
+      </scroll-view>
+    </ul>
+
+<form bindsubmit="onSave">
+    <view class='input-layer'>
+      <view class="input-panel">
+          <input class="send-input" value="{{input}}" type="text" name="content" bindinput="listenInput" placeholder="打字给对方看" />
+          <view class="send-btn" bindtap='dele'>
+            <image class='icon' src='/images/dele.png'></image>
+          </view>
+            <view class="send-btn" bindtap='wordtospeak' data-content="{{content_now}}">
+              <image class='icon' src='/images/speak.png'></image>
+            </view>
+      </view>
+  </view>
+</form>
+
+</view>

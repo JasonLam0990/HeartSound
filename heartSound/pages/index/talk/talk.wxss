@@ -1,0 +1,132 @@
+/* pages/talk/talk.wxss */
+
+.button-layer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15rpx;
+  height: 20%;
+  width: 100%;
+  background: #f0f0f0;
+}
+.showme-layer{
+  height: 35%;
+  width: 100%;
+  background: #ffffff;
+}
+.content-box-showme{
+  height: 100%;
+  line-height: 1.5;
+  padding: 20rpx 20rpx 0 30rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e5e5e5;
+}
+.content-box-showyou{
+  height: 100%;
+  line-height: 1.5;
+  padding: 20rpx 20rpx 0 30rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e5e5e5;
+  transform: scaleY(-1);
+}
+.showyou-layer{
+  height: 35%;
+  width: 100%;
+  background: #ffffff;
+  transform: scaleX(-1);
+}
+.input-layer{
+  height: 10%;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: blue;
+}
+
+.speak-button{
+  height: 220rpx;
+  width: 220rpx;
+  margin-bottom: 20rpx;
+}
+.speak-button:active{
+    opacity: .7;
+}
+.tips{
+  position: absolute;
+  width: 400rpx;
+  height: 200rpx;
+  left: 175rpx;
+  top: 320rpx;
+}
+.input-panel {
+    height: 100%;
+    padding: 0 15rpx 0 15rpx;
+    background: #f0f0f0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+.send-input {
+    font-size: 38rpx;
+    flex: 1;
+    height: 95rpx;
+    background: #fff;
+    border:#ddd 1rpx solid;
+    border-radius: 10rpx;
+    box-sizing: border-box;
+    padding: 0 10rpx;
+}
+.send-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120rpx;
+    height: 80rpx;
+    line-height: 75rpx;
+    background-color: #474646;
+    font-size: 32rpx;
+    color:#fff;
+    border-radius: 10rpx;
+    margin-left: 15rpx;
+}
+.send-btn:active{
+    opacity: .7;
+}
+.icon{
+  height: 40rpx;
+  width: 40rpx;
+}
+
+.toast{
+  background: rgba(0,0,0, 0.7);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  height: 130rpx;
+  width: 300rpx;
+  padding: 20rpx;
+  border-radius: 20rpx;
+  position: fixed;
+  top: 340rpx;
+  left: 225rpx;
+}
+.toast text{
+  font-size: 36rpx;
+}
+.waiting-icon{
+  position: relative;
+  left: 10rpx;
+  bottom: 15rpx;
+}
+.microphone{
+  height: 80rpx;
+  width: 80rpx;
+}
+.warning{
+  height: 80rpx;
+  width: 80rpx;
+  margin-left: 20rpx;
+}
+.warning-text{
+  margin-left: 20rpx;
+}
