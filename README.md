@@ -22,7 +22,12 @@ https://mp.weixin.qq.com/wxopen/plugindevdoc?appid=wx069ba97219f66d99&token=3219
 
 先简单的介绍一下本项目。
 
-以下是主要功能页面的截图。
+### 马上体验
+ <img src="/项目截图/code.jpg" width=30% />
+
+
+
+### 以下是主要功能页面的截图。
 
 <div style="display:flex;justify-content:space-around;"> 
 
