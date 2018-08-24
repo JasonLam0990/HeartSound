@@ -3,6 +3,25 @@
 
 **👏👏如果觉得本项目对你学习小程序插件的使用或其他方面有帮助的话，欢迎右上star支持👏👏** 
 
+### “微信同声传译”插件使用教程：
+
+微信公众平台添加插件
+
+https://developers.weixin.qq.com/miniprogram/introduction/plugin.html#%E4%BD%BF%E7%94%A8%E6%8F%92%E4%BB%B6 
+
+浏览插件使用文档
+
+https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/using.html
+
+查看微信同声传译开发文档
+
+https://mp.weixin.qq.com/wxopen/plugindevdoc?appid=wx069ba97219f66d99&token=321904791&lang=zh_CN
+
+
+以上材料是我入门插件使用所看的材料，相信阅读完以后，大家对插件也有一定的了解了。接下来就来看看实战的项目吧。
+
+先简单的介绍一下本项目。
+
 以下是主要功能页面的截图。
 
 <div style="display:flex;justify-content:space-around;"> 
@@ -19,6 +38,155 @@
  <img src="/项目截图/about.jpg" width=30% />
 
 </div>
+
+ #### 使用流程
+
+一、在后台添加好插件以后
+
+二、用你添加了插件的小程序的AppID作为小程序开发者创建项目
+
+三、在项目的app.json引入插件
+``` 
+{
+  "pages": [
+    ...
+  ],
+ 
+  ...
+  
+  "plugins": {
+      "WechatSI": {
+      "version": "0.1.0",
+      "provider": "wx069ba97219f66d99"
+    }
+  }
+}
+``` 
+
+四、在需要用到插件功能的页面引入和使用插件，以下的讲解我都写在注释里啦，认真看注释唷！！！
+``` 
+// pages/talk/talk.js
+ 
+// 引入插件
+var plugin = requirePlugin("WechatSI")
+let manager = plugin.getRecordRecognitionManager()
+ 
+Page({
+ 
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    showmicro:false,
+    input:'',
+    content_up:'',
+    content_down:'你好，我听力不好，你可以按住底部的按钮，对我说普通话'
+  },
+ 
+  //监听字的输入，实时显示在屏幕，并且content_down还会用在文字转语音（语音合成）上。
+  listenInput: function (e) {
+    var content = e.detail.value
+    if (content==''){
+      content = '你好，我听力不好，你可以按住底部的按钮，对我说普通话'
+    }
+    this.setData({
+      content_down: content
+    })
+  },
+ 
+  // 清空输入框的内容
+  dele: function (e) {
+    this.setData({
+      content_down: '',
+      input:''
+    })
+  },
+ 
+  // 插件使用重要步骤！！！
+ 
+  // 手指按下
+  touchdown_plugin: function () {
+ 
+    // 开始识别语音，设置最长能录30s（插件默认最长能录60s，我觉得30s够了，反正也显示不完- -。）
+    manager.start({ 
+      duration: 30000, lang: "zh_CN" 
+    })
+ 
+    //让“正在说话”的遮罩层出现
+    this.setData({
+      showmicro:true
+    }) 
+  },
+ 
+  // 手指松开
+  touchup_plugin: function () {
+    var that = this
+ 
+    // 语音停止识别的时候会调用的函数，这里是把最终识别结果返回的内容呈现在content_up中
+    manager.onStop = function (res) {
+      that.setData({
+        content_up: res.result
+      })
+    }
+    
+    // 当有新的识别内容返回，就会调用此事件。一般用于想马上得到结果的那种，否则还是onstop用的习惯一些，项目没用到这个，仅作讲解
+    // manager.onRecognize = function (res) {
+    //  that.setData({
+    //    content_up: res.result
+    //  })
+    //}
+ 
+    //语音识别停止（此时就会调用manager.onStop函数）
+    manager.stop();
+ 
+    //让“正在说话”的遮罩层消失
+    this.setData({
+      showmicro: false,
+    })
+  },
+ 
+  // 文字转语音（语音合成）
+  wordtospeak: function(e) {
+ 
+    // 将wxml中传过来的文本内容存起来，用api传给插件
+    var content = e.currentTarget.dataset.content
+ 
+    var that = this
+    plugin.textToSpeech({
+      lang: "zh_CN",
+      tts: true,
+      content: content,
+      success: function (res) {
+        
+        // 插件返回合成好以后的mp3文件，用api自动播放
+        const innerAudioContext = wx.createInnerAudioContext()
+        innerAudioContext.autoplay = true
+        innerAudioContext.src = res.filename
+        innerAudioContext.onPlay(() => {
+          console.log('开始播放')
+        })
+ 
+        console.log("succ tts", res.filename)
+      },
+      fail: function (res) {
+        console.log("fail tts", res)
+      }
+    })
+  },
+ 
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+    return {
+      title: '心声Lite，让爱发声',
+      path: '/pages/index/talk/talk',
+      imageUrl: '/images/xxs.png'
+    }
+  },
+})
+``` 
+
 
 ### 更新日志：
 
